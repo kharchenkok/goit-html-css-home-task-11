@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-top: 1px solid rgb(229, 229, 229);
+  font-family: $main-font-family;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+
+  &__info-link {
+    color: $second-decoration-color;
+
+    &:hover {
+      font-size: 1.07rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.page-form {
+  display: flex;
+  object-position: right;
+  width: 380px;
+  justify-content: space-between;
+
+  input::placeholder {
+    color: rgb(204, 204, 204);
+    font-family: $minor-font-family;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  &__place-input {
+    border: 1px solid rgb(229, 229, 229);
+    width: 230px;
+    padding-left: 15px;
+
+    &:focus:valid {
+      border: 2px solid $main-decoration-color;
+    }
+
+    &:focus:invalid {
+      border: 2px solid $second-decoration-color;
+    }
+  }
+
+}

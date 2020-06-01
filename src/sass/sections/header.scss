@@ -1,0 +1,144 @@
+.header {
+  background-image: linear-gradient(rgba(243, 129, 129, 0.9),
+      rgba(252, 227, 138, 0.9)),
+    url("../images/1.png");
+  background-size: cover;
+  padding: 25px 0 226px;
+
+  &-title {
+    max-width: 860px;
+    font-size: 10.71rem;
+    font-family: $main-font-family;
+    color: $header-main-font-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto 107px;
+
+    &-about {
+      font-size: 5.14rem;
+      font-family: $decoration-font-family;
+      color: $header-main-font-color;
+      line-height: 1.2;
+      text-align: center;
+      font-weight: 400;
+      margin: 0 auto 44px;
+    }
+
+  }
+
+  &__link {
+    font-family: $main-font-family;
+    color: $header-main-font-color;
+    line-height: 1.2;
+    padding: 20px 0;
+
+    &_site-logo {
+      font-size: 2.14rem;
+      font-weight: 700;
+    }
+
+  }
+
+  &__link_menu-list {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    &::after {
+      display: block;
+      content: "";
+      margin-top: 10px;
+      height: 3px;
+      background-color: $third-decoration-color;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 300ms linear;
+    }
+
+    &:hover {
+      color: $third-decoration-color;
+    }
+
+    &:hover::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+
+  @media (min-resolution: 192dpi) {
+    background-image: linear-gradient(rgba(243, 129, 129, 0.9),
+        rgba(252, 227, 138, 0.9)),
+      url("../images/2@2x.png");
+  }
+}
+
+
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 181px;
+}
+
+
+.site-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &-list {
+    margin-right: 50px;
+  }
+
+  &__btn {
+    background-color: transparent;
+    width: 18px;
+    height: 18px;
+    border: none;
+    cursor: pointer;
+
+    &:hover::after {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover .menu__btn-icon {
+      fill: $third-decoration-color;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      margin-top: 10px;
+      height: 3px;
+      background-color: $third-decoration-color;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 300ms linear;
+    }
+
+  }
+
+  &__btn-item:not(:last-child) {
+    margin-right: 36px;
+  }
+
+  &__btn-icon {
+    fill: $header-main-font-color;
+    width: 18px;
+    height: 18px;
+  }
+}

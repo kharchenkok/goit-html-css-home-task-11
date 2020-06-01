@@ -1,0 +1,22 @@
+.page-button {
+  display: block;
+  font-family: $main-font-family;
+  font-weight: 400;
+  width: 164px;
+  height: 44px;
+  color: $header-main-font-color;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &__transparent-btn {
+    border: 3px solid $header-main-font-color;
+    background-color: transparent;
+  }
+
+  &__green-btn {
+    background-color: $main-decoration-color;
+    border: none;
+  }
+}

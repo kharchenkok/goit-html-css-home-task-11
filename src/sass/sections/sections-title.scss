@@ -1,0 +1,56 @@
+.section-title {
+  font-family: $main-font-family;
+  font-size: 2.14rem;
+  color: $section-title-font-color;
+  margin: 0 auto;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $second-decoration-color;
+    width: 60px;
+    height: 3px;
+    margin: 38px auto 0;
+  }
+
+  &-about {
+    font-family: $decoration-font-family;
+    font-size: 1.71rem;
+    color: $section-title-font-color;
+    margin: 0 auto 23px;
+    text-align: center;
+  }
+
+  &__services-title {
+    margin-bottom: 62px;
+  }
+
+  &__team-title {
+    margin-bottom: 45px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// .section-title__services-title {
+//   margin-bottom: 62px;
+// }
+
+// .section-title::after {
+//   content: "";
+//   display: block;
+//   background-color: $second-decoration-color;
+//   width: 60px;
+//   height: 3px;
+//   margin: 38px auto 0;
+// }

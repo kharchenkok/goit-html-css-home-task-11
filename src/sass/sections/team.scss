@@ -1,0 +1,144 @@
+.team {
+  padding: 47px 0 80px;
+
+  &__sections-descr {
+    max-width: 950px;
+    text-align: center;
+    margin-bottom: 92px;
+    font-family: $minor-font-family;
+    font-size: 1.07rem;
+    color: $section-font-color;
+    margin: 0 auto 23px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+      flex-basis: 380px;
+      margin: 0 auto;
+    }
+
+    &__item:not(:nth-last-child(-n+3)) {
+      margin-bottom: 80px;
+    }
+
+    &__item:hover .overlay {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-10px, -10px);
+      box-shadow: 10px 10px 0px 0 $main-decoration-color;
+    }
+
+    &__item:hover .team-list__items-photo {
+      transform: translate(-10px, -10px);
+    }
+  }
+
+  &-list__item-title {
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: $main-font-family;
+    color: $section-title-font-color;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  &-list__item-proffesion {
+    font-size: 1.07rem;
+    font-family: $minor-font-family;
+    color: $section-font-color;
+    line-height: 1.6;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &-list__items-photo {
+    transition: all 500ms linear;
+  }
+
+  &-list__photo-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(243, 129, 129, 0.9),
+      rgba(252, 227, 138, 0.9));
+  transition: all 500ms linear;
+  opacity: 0;
+  visibility: hidden;
+
+  &__social-list {
+    position: absolute;
+    max-width: 245px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social-item {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    background-color: $third-decoration-color;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms linear;
+
+    &:not(:last-child) {
+      margin-right: 2px;
+    }
+
+    &:hover {
+      background-color: $second-decoration-color;
+    }
+
+    &:hover .overlay__social-item-icon {
+      fill: #ffffff;
+    }
+  }
+
+
+  &__social-item-icon {
+    fill: $second-decoration-color;
+    transition: all 200ms linear;
+
+    &_facebook {
+      width: 13px;
+      height: 26px;
+    }
+
+    &_twitter {
+      width: 26px;
+      height: 22px;
+    }
+
+    &_pinterest {
+      width: 21px;
+      height: 26px;
+    }
+
+    &_instagram {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
